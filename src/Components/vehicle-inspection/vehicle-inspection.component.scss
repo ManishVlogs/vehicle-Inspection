@@ -1,0 +1,183 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Headings */
+h3 {
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Label styling */
+.form-label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* Input and textarea styling */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #343a40;  /* Dark header background */
+    color: white;  /* White text color for contrast */
+    font-weight: bold;
+    text-transform: uppercase;  /* Make text uppercase for a formal look */
+    letter-spacing: 1px;  /* Small letter spacing for better readability */
+    border-bottom: 2px solid #007bff;  /* Blue border at the bottom for emphasis */
+}
+
+/* Add hover effect to table rows for better interactivity */
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table td input {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.table td input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Improve button inside table for better visibility */
+.table .btn-danger {
+    background-color: #dc3545;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.table .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Add Row Button Styling */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .table td input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

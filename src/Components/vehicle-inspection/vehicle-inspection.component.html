@@ -1,0 +1,124 @@
+<div class="container">
+    test
+    <h3 class="text-center mb-4">Service Form</h3>
+    <form>
+        <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Customer Name</label>
+                <input type="text" class="form-control" name="customerName" placeholder="">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Service Consultant</label>
+                <input type="text" class="form-control" name="serviceConsultant" placeholder="">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control" name="address" placeholder="">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Model Code</label>
+                <input type="text" class="form-control" name="modelCode" placeholder="">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Registration Number</label>
+                <input type="text" class="form-control" name="registrationNumber" placeholder="">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Job Card Number</label>
+                <input type="text" class="form-control" name="jobCardNumber" placeholder="">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Model Name</label>
+                <input type="text" class="form-control" name="modelName" placeholder="">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Job Card Date</label>
+                <input type="date" class="form-control" name="jobCardDate">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Odometer Reading</label>
+                <input type="text" class="form-control" name="OdometerReading" placeholder="">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Recipient GSTIN</label>
+                <input type="text" class="form-control" name="RecipientGSTIN" >
+                
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Customer Voice</label>
+            <textarea class="form-control" rows="3" name="customerVoice" placeholder="Enter customer feedback..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+    <div class="container">
+      <h3 class="text-center">Parts Description</h3>
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Qty</th>
+            <th>Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let part of parts; let i = index">
+            <td><input type="text" class="form-control" [(ngModel)]="part.code"></td>
+            <td><input type="text" class="form-control" [(ngModel)]="part.description"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="part.qty"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="part.amount"></td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="removeRow(i)">✖</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-success" (click)="addRow()">➕ Add Row</button>
+    </div>
+  
+    
+    <div class="container">
+      <h3 class="text-center">Labour Description</h3>
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let part of parts; let i = index">
+            <td><input type="text" class="form-control" [(ngModel)]="part.code"></td>
+            <td><input type="text" class="form-control" [(ngModel)]="part.description"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="part.price"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="part.amount"></td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="removeRow(i)">✖</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-success" (click)="addRow()">➕ Add Row</button>
+    </div>
+  
+    
+  
+  
+  
+  </div>
+  <router-outlet />
+  
